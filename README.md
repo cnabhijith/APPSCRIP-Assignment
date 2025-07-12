@@ -195,3 +195,4 @@ After DNS is updated, your GoDaddy domain should route to the application on you
 ✅ DNS Resolution Verification (Example Screenshot or Output)
 
 nslookup <domain>
+---
