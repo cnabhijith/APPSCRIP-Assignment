@@ -14,11 +14,11 @@ sudo systemctl enable jenkins
 sudo systemctl start Jenkins
 
 
-### 📌 1. Install Terraform
+📌 1. Install Terraform
 
 sudo snap install terraform --classic
 
-### 📌 2. Install AWS CLI
+📌 2. Install AWS CLI
 
 Download and install AWS CLI on the VM:
 
@@ -33,7 +33,7 @@ sudo ./aws/install
 aws configure
 
 
-### 📌 3. Install Kubectl
+📌 3. Install Kubectl
 
 Install kubectl:
 
@@ -46,7 +46,7 @@ sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
 
 
-### 📌 4. Install EKSCTL
+ 📌 4. Install EKSCTL
 
 Install eksctl for EKS cluster management:
 
@@ -56,7 +56,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
  
-### 📌 Create Terraform Files
+📌 Create Terraform Files
 
 Create the following files for your Terraform setup:
 
@@ -75,7 +75,7 @@ terraform.tfvars
 variables.tf
 
 
-### 📌 7. Run Terraform Commands
+📌 7. Run Terraform Commands
 
 Initialize and apply Terraform configurations:
 
