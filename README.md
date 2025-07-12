@@ -138,17 +138,14 @@ Access ArgoCD UI at: https://<EXTERNAL-IP>
 
 ### 📌 4. Access ArgoCD Web UI
 
-kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
-
 Login Info:
 
 Username: admin
 
-Password: (retrieved above)
+Password: 
 
-Optional CLI Login:
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 
-argocd login <ARGOCD_SERVER_IP>
 
 ### 📌 5. Connect a GitHub Repository to ArgoCD
 
