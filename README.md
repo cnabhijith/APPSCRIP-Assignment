@@ -8,7 +8,7 @@
 
 sudo snap install terraform --classic
 
-📌 2. Install AWS CLI
+### 📌 2. Install AWS CLI
 
 Download and install AWS CLI on the VM:
 
@@ -23,7 +23,7 @@ sudo ./aws/install
 aws configure
 
 
-📌 3. Install Kubectl
+### 📌 3. Install Kubectl
 
 Install kubectl:
 
@@ -36,7 +36,7 @@ sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
 
 
-📌 4. Install EKSCTL
+### 📌 4. Install EKSCTL
 
 Install eksctl for EKS cluster management:
 
@@ -46,7 +46,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
 
-📌 5. Save the Script
+### 📌 5. Save the Script
 
 Save all commands in a file (e.g., ctl.sh) and make it executable:
 
