@@ -52,7 +52,7 @@ Save all commands in a file (e.g., ctl.sh) and make it executable:
 
 chmod +x ctl.sh
 
-📌 6. Create Terraform Files
+### 📌 6. Create Terraform Files
 
 Create the following files for your Terraform setup:
 
@@ -71,7 +71,7 @@ terraform.tfvars
 variables.tf
 
 
-📌 7. Run Terraform Commands
+### 📌 7. Run Terraform Commands
 
 Initialize and apply Terraform configurations:
 
@@ -82,11 +82,11 @@ terraform plan
 terraform apply -auto-approve
 
 
-📌 8. Create EKS Cluster
+### 📌 8. Create EKS Cluster
 
-📌 Set Up ArgoCD on EKS
+### 📌 Set Up ArgoCD on EKS
 
-📌 Install ArgoCD CLI
+### 📌 Install ArgoCD CLI
 
 First, install the ArgoCD CLI to interact with ArgoCD:
 
@@ -105,7 +105,7 @@ sudo chmod +x /usr/local/bin/argocd
 
 argocd version
 
-📌 Install ArgoCD in the Kubernetes Cluster
+### 📌 Install ArgoCD in the Kubernetes Cluster
 
  Create Namespace
 
@@ -121,7 +121,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argocd/sta
 kubectl get pods -n argocd
 
 
-📌 Expose the ArgoCD Server
+### 📌 Expose the ArgoCD Server
 
 Option 1: Port-Forwarding (Quick Setup)
 
@@ -130,7 +130,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 Access ArgoCD UI at: https://localhost:8080
 
-📌 Option 2: LoadBalancer (Public Access)
+### 📌 Option 2: LoadBalancer (Public Access)
 
 kubectl edit svc argocd-server -n argocd
 
@@ -148,7 +148,7 @@ kubectl get svc argocd-server -n argocd
 
 Access ArgoCD UI at: https://<EXTERNAL-IP>
 
-📌 4. Access ArgoCD Web UI
+### 📌 4. Access ArgoCD Web UI
 
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 
@@ -162,7 +162,7 @@ Optional CLI Login:
 
 argocd login <ARGOCD_SERVER_IP>
 
-📌 5. Connect a GitHub Repository to ArgoCD
+### 📌 5. Connect a GitHub Repository to ArgoCD
 
 argocd app create <app-name> \
 
@@ -180,26 +180,26 @@ argocd app sync <app-name>
 
 argocd app get <app-name>
 
-📌 6. Automate Syncing with GitOps
+### 📌 6. Automate Syncing with GitOps
 
 Enable auto-sync to keep your cluster in sync with your Git repository:
 
 argocd app set <app-name> --sync-policy automated
 
 
-📌 🌐 Step 9: DNS Mapping with GoDaddy Domain
+### 📌 🌐 Step 9: DNS Mapping with GoDaddy Domain
 
-📌 1. Get the Load Balancer DNS Name
+### 📌 1. Get the Load Balancer DNS Name
 
 Go to EC2 Dashboard → Load Balancers
 
 Copy the DNS name under the Description tab
 
-📌 2. Log In to GoDaddy
+### 📌 2. Log In to GoDaddy
 
 Go to GoDaddy and log in.
 
-📌 3. Access Domain Settings
+### 📌 3. Access Domain Settings
 
 Go to the Domains section
 
@@ -207,13 +207,13 @@ Select the domain
 
 Click to open domain settings
 
-📌 . Manage DNS Settings
+### 📌 . Manage DNS Settings
 
 Scroll to DNS Settings
 
 Click Manage DNS
 
-📌. Add a CNAME Record
+### 📌. Add a CNAME Record
 
 Type: CNAME
 
@@ -225,7 +225,7 @@ TTL: Default or as required
 
 Click Save
 
-📌 6. Update the A Record (Optional)
+### 📌 6. Update the A Record (Optional)
 
 To map the root domain (example.com):
 
@@ -233,16 +233,16 @@ Modify or add an A Record to point to the IP address of the Load Balancer
 
 Or use AWS Route 53 for alias mapping
 
-📌 7. Wait for DNS Propagation
+### 📌 7. Wait for DNS Propagation
 
 Changes may take a few minutes to 24 hours.
 
 
-📌 8. Test the Setup
+### 📌 8. Test the Setup
 
 After DNS is updated, your GoDaddy domain should route to the application on your EKS cluster.
 
-✅ DNS Resolution Verification (Output)
+### ✅ DNS Resolution Verification (Output)
 
 nslookup <domain>
 
