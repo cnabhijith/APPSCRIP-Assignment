@@ -1,6 +1,6 @@
 # 🚀 EKS Cluster Setup and ArgoCD Deployment with GoDaddy DNS Integration
 
-## 📌 1. Install Terraform
+### 📌 1. Install Terraform
 
 
 
@@ -76,9 +76,7 @@ terraform plan
 terraform apply -auto-approve
 
 
-### 📌 8. Create EKS Cluster
-
-### 📌 Set Up ArgoCD on EKS
+### 📌 8. Create EKS Cluster & Set Up ArgoCD on EKS
 
 ### 📌 Install ArgoCD CLI
 
