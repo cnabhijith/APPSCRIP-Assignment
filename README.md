@@ -6,9 +6,9 @@
 
 
 ```bash
-Install Terraform using the following command:
+📌 Install Terraform using the following command:
 sudo snap install terraform --classic
-📌 4. Install AWS CLI
+📌 2. Install AWS CLI
 Download and install AWS CLI on the VM:
 
 
@@ -17,7 +17,7 @@ sudo apt install unzip
 unzip awscliv2.zip
 sudo ./aws/install
 aws configure
-📌 5. Install Kubectl
+📌 3. Install Kubectl
 Install kubectl:
 
 
@@ -25,21 +25,21 @@ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-0105/b
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
-📌 6. Install EKSCTL
+📌 4. Install EKSCTL
 Install eksctl for EKS cluster management:
 
 
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
-📌 7. Save the Script
+📌 5. Save the Script
 Save all commands in a file (e.g., ctl.sh) and make it executable:
 
 bash
 Copy
 Edit
 chmod +x ctl.sh
-📌 8. Create Terraform Files
+📌 6. Create Terraform Files
 Create the following files for your Terraform setup:
 
 
@@ -50,14 +50,14 @@ outputs.tf
 provider.tf
 terraform.tfvars
 variables.tf
-📌 9. Run Terraform Commands
+📌 7. Run Terraform Commands
 Initialize and apply Terraform configurations:
 
 
 terraform init
 terraform plan
 terraform apply -auto-approve
-📌 10. Create EKS Cluster
+📌 8. Create EKS Cluster
 This step is typically handled by your Terraform configuration in the previous step.
 
 🎯 Set Up ArgoCD on EKS
