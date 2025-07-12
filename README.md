@@ -67,26 +67,32 @@ ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes. H
 1. Install ArgoCD CLI
 First, install the ArgoCD CLI to interact with ArgoCD:
 
-
 # Download ArgoCD CLI
+
 sudo curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argocd/releases/latest/download/argocd-linux-amd64
 
 # Make it executable
+
 sudo chmod +x /usr/local/bin/argocd
 
 # Verify installation
+
 argocd version
+
 2. Install ArgoCD in the Kubernetes Cluster
 
-
 # Create Namespace
+
 kubectl create namespace argocd
 
 # Install ArgoCD using official manifests
+
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argocd/stable/manifests/install.yaml
 
 # Verify pods
+
 kubectl get pods -n argocd
+
 3. Expose the ArgoCD Server
 Option 1: Port-Forwarding (Quick Setup)
 
@@ -100,13 +106,10 @@ Option 2: LoadBalancer (Public Access)
 kubectl edit svc argocd-server -n argocd
 Change:
 
-
 type: ClusterIP
 To:
-
 type: LoadBalancer
 Then retrieve external IP:
-
 
 kubectl get svc argocd-server -n argocd
 Access ArgoCD UI at: https://<EXTERNAL-IP>
@@ -124,6 +127,7 @@ Optional CLI Login:
 
 
 argocd login <ARGOCD_SERVER_IP>
+
 5. Connect a GitHub Repository to ArgoCD
 
 argocd app create <app-name> \
@@ -140,7 +144,9 @@ argocd app get <app-name>
 Enable auto-sync to keep your cluster in sync with your Git repository:
 
 argocd app set <app-name> --sync-policy automated
+
 🌐 Step 9: DNS Mapping with GoDaddy Domain
+
 1. Get the Load Balancer DNS Name
 Go to EC2 Dashboard → Load Balancers
 
@@ -188,4 +194,4 @@ After DNS is updated, your GoDaddy domain should route to the application on you
 
 ✅ DNS Resolution Verification (Example Screenshot or Output)
 
-nslookup domain>
+nslookup <domain>
