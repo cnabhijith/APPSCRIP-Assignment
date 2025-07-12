@@ -2,10 +2,6 @@
 
 ### 📌 1. Install Terraform
 
-
-
-### 📌 Install Terraform using the following command:
-
 sudo snap install terraform --classic
 
 ### 📌 2. Install AWS CLI
