@@ -1,6 +1,6 @@
 # install Jenkins on VM
 
-'''bash
+```bash
  sudo apt install openjdk-17-jre-headless 
 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
