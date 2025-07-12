@@ -45,14 +45,8 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
-
-### 📌 5. Save the Script
-
-Save all commands in a file (e.g., ctl.sh) and make it executable:
-
-chmod +x ctl.sh
-
-### 📌 6. Create Terraform Files
+ 
+### 📌 Create Terraform Files
 
 Create the following files for your Terraform setup:
 
