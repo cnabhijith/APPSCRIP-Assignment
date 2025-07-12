@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/cnabhijith/nginx-CD.git' 
+    repoURL: 'https://github.com/cnabhijith/nginx-CD-for-AAPSCRIP.git' 
     path: 'k8s'
     targetRevision: HEAD
   destination:
