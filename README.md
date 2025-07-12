@@ -3,9 +3,10 @@
 
 ## 📌 1. Install Terraform
 
-Install Terraform using the following command:
+
 
 ```bash
+Install Terraform using the following command:
 sudo snap install terraform --classic
 📌 4. Install AWS CLI
 Download and install AWS CLI on the VM:
