@@ -2,9 +2,9 @@
 
 ## 📌 1. Install Terraform
 
-```bash
 
-### 📌 Install Terraform using the following command:
+
+ 📌 Install Terraform using the following command:
 
 sudo snap install terraform --classic
 
