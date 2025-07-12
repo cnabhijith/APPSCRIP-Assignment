@@ -84,11 +84,7 @@ terraform apply -auto-approve
 
 📌 8. Create EKS Cluster
 
-This step is typically handled by your Terraform configuration in the previous step.
-
 📌 Set Up ArgoCD on EKS
-
-ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes. Here's how to set it up on your EKS cluster:
 
 1. Install ArgoCD CLI
 
