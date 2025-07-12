@@ -67,29 +67,29 @@ ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes. H
 1. Install ArgoCD CLI
 First, install the ArgoCD CLI to interact with ArgoCD:
 
-# Download ArgoCD CLI
+ Download ArgoCD CLI
 
 sudo curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argocd/releases/latest/download/argocd-linux-amd64
 
-# Make it executable
+ Make it executable
 
 sudo chmod +x /usr/local/bin/argocd
 
-# Verify installation
+ Verify installation
 
 argocd version
 
 2. Install ArgoCD in the Kubernetes Cluster
 
-# Create Namespace
+ Create Namespace
 
 kubectl create namespace argocd
 
-# Install ArgoCD using official manifests
+ Install ArgoCD using official manifests
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argocd/stable/manifests/install.yaml
 
-# Verify pods
+ Verify pods
 
 kubectl get pods -n argocd
 
