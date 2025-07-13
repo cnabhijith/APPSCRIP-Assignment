@@ -74,14 +74,3 @@ terraform.tfvars
 
 variables.tf
 
-
-📌 7. Run Terraform Commands
-
-Initialize and apply Terraform configurations:
-
-terraform init
-
-terraform plan
-
-terraform apply -auto-approve
-
